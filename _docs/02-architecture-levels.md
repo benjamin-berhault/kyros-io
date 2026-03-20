@@ -8,15 +8,19 @@ toc: true
 
 Kyros uses a progressive architecture approach with 5 distinct levels. Each level builds upon the previous one, adding complexity only when justified by data scale and requirements.
 
+**Kyros is 100% free and open-source (Apache 2.0).** You self-host on your own infrastructure. The costs below are estimated VPS/cloud bills, not Kyros fees.
+
 ## Level Overview
 
-| Level | Name | Stack | Data Size | Monthly Cost |
-|:-----:|------|-------|-----------|--------------|
+| Level | Name | Stack | Data Size | Infra Cost* |
+|:-----:|------|-------|-----------|-------------|
 | **0** | Local | DuckDB + dbt | < 50 GB | $0 |
-| **1** | Team | + PostgreSQL + Dagster + Superset | < 500 GB | $20-100 |
-| **2** | Data Lake | + MinIO + JupyterLab + Grafana | < 1 TB | $50-150 |
-| **3** | Distributed | + Spark + Trino | 1+ TB | $150-500 |
-| **4** | Enterprise | + Kafka + Flink | Any | $500+ |
+| **1** | Team | + PostgreSQL + Dagster + Superset | < 500 GB | $30-80 |
+| **2** | Data Lake | + MinIO + JupyterLab + Grafana | < 1 TB | $80-200 |
+| **3** | Distributed | + Spark + Trino | 1+ TB | $300-600 |
+| **4** | Enterprise | + Kafka + Flink | Any | $600-1500+ |
+
+*\*Monthly estimates on budget providers (Hetzner, OVH). AWS/GCP typically 2-3x higher.*
 
 ## Level 0: Local Development
 

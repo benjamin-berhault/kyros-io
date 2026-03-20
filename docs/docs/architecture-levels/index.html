@@ -37,7 +37,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-03-20T12:19:05+01:00">
+  <meta property="article:published_time" content="2026-03-20T12:30:36+01:00">
 
 
 
@@ -241,7 +241,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Architecture Levels">
     <meta itemprop="description" content="Understanding Kyros’s progressive architecture approach.">
-    <meta itemprop="datePublished" content="2026-03-20T12:19:05+01:00">
+    <meta itemprop="datePublished" content="2026-03-20T12:30:36+01:00">
     <meta itemprop="dateModified" content="2025-03-20T00:00:00+01:00">
 
     <div class="page__inner-wrap">
@@ -268,6 +268,8 @@
         
         <p>Kyros uses a progressive architecture approach with 5 distinct levels. Each level builds upon the previous one, adding complexity only when justified by data scale and requirements.</p>
 
+<p><strong>Kyros is 100% free and open-source (Apache 2.0).</strong> You self-host on your own infrastructure. The costs below are estimated VPS/cloud bills, not Kyros fees.</p>
+
 <h2 id="level-overview">Level Overview</h2>
 
 <table>
@@ -277,7 +279,7 @@
       <th>Name</th>
       <th>Stack</th>
       <th>Data Size</th>
-      <th>Monthly Cost</th>
+      <th>Infra Cost*</th>
     </tr>
   </thead>
   <tbody>
@@ -293,31 +295,33 @@
       <td>Team</td>
       <td>+ PostgreSQL + Dagster + Superset</td>
       <td>&lt; 500 GB</td>
-      <td>$20-100</td>
+      <td>$30-80</td>
     </tr>
     <tr>
       <td style="text-align: center"><strong>2</strong></td>
       <td>Data Lake</td>
       <td>+ MinIO + JupyterLab + Grafana</td>
       <td>&lt; 1 TB</td>
-      <td>$50-150</td>
+      <td>$80-200</td>
     </tr>
     <tr>
       <td style="text-align: center"><strong>3</strong></td>
       <td>Distributed</td>
       <td>+ Spark + Trino</td>
       <td>1+ TB</td>
-      <td>$150-500</td>
+      <td>$300-600</td>
     </tr>
     <tr>
       <td style="text-align: center"><strong>4</strong></td>
       <td>Enterprise</td>
       <td>+ Kafka + Flink</td>
       <td>Any</td>
-      <td>$500+</td>
+      <td>$600-1500+</td>
     </tr>
   </tbody>
 </table>
+
+<p><em>*Monthly estimates on budget providers (Hetzner, OVH). AWS/GCP typically 2-3x higher.</em></p>
 
 <h2 id="level-0-local-development">Level 0: Local Development</h2>
 

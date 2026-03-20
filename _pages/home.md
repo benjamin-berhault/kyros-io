@@ -23,7 +23,7 @@ feature_row:
   - image_path: /assets/images/kyros-feature-2.webp
     alt: "Cost-Effective"
     title: "Right-Sized Costs"
-    excerpt: "Level 0 costs $0/month. Level 1 starts at $20. Only pay for what you need. No vendor lock-in, no surprise bills."
+    excerpt: "Level 0 costs $0. Level 1 starts around $30/month on budget VPS providers. You control your infrastructure—no vendor lock-in, no surprise bills."
   - image_path: /assets/images/kyros-feature-3.webp
     title: "Open-Source Stack"
     excerpt: "Built on proven technologies: PostgreSQL, Dagster, Superset, Spark, Trino, Kafka, Flink. All open-source, all production-ready."
@@ -44,13 +44,13 @@ levels_row:
   - title: "Level 0: Local"
     excerpt: "DuckDB + dbt<br>**$0/month** • < 50 GB"
   - title: "Level 1: Team"
-    excerpt: "+ PostgreSQL + Dagster + Superset<br>**$20-100/month** • < 500 GB"
+    excerpt: "+ PostgreSQL + Dagster + Superset<br>**$30-80/month** • < 500 GB"
   - title: "Level 2: Data Lake"
-    excerpt: "+ MinIO + JupyterLab + Grafana<br>**$50-150/month** • < 1 TB"
+    excerpt: "+ MinIO + JupyterLab + Grafana<br>**$80-200/month** • < 1 TB"
   - title: "Level 3: Distributed"
-    excerpt: "+ Spark + Trino + Code Server<br>**$150-500/month** • 1+ TB"
+    excerpt: "+ Spark + Trino + Code Server<br>**$300-600/month** • 1+ TB"
   - title: "Level 4: Enterprise"
-    excerpt: "+ Kafka + Flink + Full Observability<br>**$500+/month** • Any scale"
+    excerpt: "+ Kafka + Flink + Full Observability<br>**$600-1500/month** • Any scale"
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -59,7 +59,8 @@ levels_row:
 
 ## Architecture Levels
 
-Choose your complexity level based on actual data needs:
+**100% open-source (Apache 2.0). Self-hosted on your infrastructure.**<br>
+*Costs below are estimated VPS/cloud bills (Hetzner, OVH, DigitalOcean), not Kyros fees. Kyros is free.*
 
 {% include feature_row id="levels_row" %}
 
