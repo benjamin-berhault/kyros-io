@@ -18,8 +18,8 @@ title_separator          : "-"
 subtitle                 : "Right tool • Right time • Right cost"
 name                     : &name "Kyros"
 description              : &description "Deploy the right data architecture at the right time. Start simple with DuckDB, scale to Spark when justified. Open-source, cloud-agnostic, modular."
-url                      : https://kyros.studio
-baseurl                  : ""
+url                      : https://benjamin-berhault.github.io
+baseurl                  : /kyros-io
 repository               : "benjamin-berhault/kyros"
 teaser                   : "/assets/images/kyros-logo-800x500-teaser.png" # Optional path to a teaser image
 logo                     : "/assets/images/kyros-logo-88-alpha.png" # Path to your Kyros logo image
