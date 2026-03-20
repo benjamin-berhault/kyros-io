@@ -1,0 +1,718 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Architecture Levels - Kyros - Data Platform at the Right Scale</title>
+<meta name="description" content="Understanding Kyros’s progressive architecture approach.">
+
+
+  <meta name="author" content="Kyros">
+  
+  <meta property="article:author" content="Kyros">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Kyros - Data Platform at the Right Scale">
+<meta property="og:title" content="Architecture Levels">
+<meta property="og:url" content="https://benjamin-berhault.github.io/kyros-io/docs/architecture-levels/">
+
+
+  <meta property="og:description" content="Understanding Kyros’s progressive architecture approach.">
+
+
+
+  <meta property="og:image" content="https://benjamin-berhault.github.io/kyros-io/assets/images/kyros-logo-1200x630-og_image.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2026-03-20T12:19:05+01:00">
+
+
+
+  <meta property="article:modified_time" content="2025-03-20T00:00:00+01:00">
+
+
+
+
+<link rel="canonical" href="https://benjamin-berhault.github.io/kyros-io/docs/architecture-levels/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/kyros-io/feed.xml" type="application/atom+xml" rel="alternate" title="Kyros - Data Platform at the Right Scale Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/kyros-io/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/kyros-io/"><img src="/kyros-io/assets/images/kyros-logo-88-alpha.png" alt="Kyros"></a>
+        
+        <a class="site-title" href="/kyros-io/">
+          Kyros
+          <span class="site-subtitle">Right tool • Right time • Right cost</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/kyros-io/docs/quick-start-guide/"
+                
+                
+              >Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/kyros-io/docs/architecture-levels/"
+                
+                
+              >Docs</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="https://github.com/benjamin-berhault/kyros"
+                
+                
+              >GitHub</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/kyros-io/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Getting Started</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/kyros-io/docs/quick-start-guide/">Quick-Start Guide</a></li>
+            
+              <li><a href="/kyros-io/docs/architecture-levels/" class="active">Architecture Levels</a></li>
+            
+              <li><a href="/kyros-io/docs/components/">Components Reference</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Operations</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/kyros-io/docs/observability/">Observability</a></li>
+            
+              <li><a href="/kyros-io/docs/security/">Security</a></li>
+            
+              <li><a href="/kyros-io/docs/backup-restore/">Backup & Restore</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Production</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/kyros-io/docs/traefik/">Traefik & HTTPS</a></li>
+            
+              <li><a href="/kyros-io/docs/production/">Production Checklist</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Architecture Levels">
+    <meta itemprop="description" content="Understanding Kyros’s progressive architecture approach.">
+    <meta itemprop="datePublished" content="2026-03-20T12:19:05+01:00">
+    <meta itemprop="dateModified" content="2025-03-20T00:00:00+01:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://benjamin-berhault.github.io/kyros-io/docs/architecture-levels/" itemprop="url">Architecture Levels
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#level-overview">Level Overview</a></li><li><a href="#level-0-local-development">Level 0: Local Development</a><ul><li><a href="#components">Components</a></li><li><a href="#when-to-use">When to Use</a></li><li><a href="#upgrade-when">Upgrade When</a></li></ul></li><li><a href="#level-1-team">Level 1: Team</a><ul><li><a href="#components-1">Components</a></li><li><a href="#when-to-use-1">When to Use</a></li><li><a href="#upgrade-when-1">Upgrade When</a></li></ul></li><li><a href="#level-2-data-lake">Level 2: Data Lake</a><ul><li><a href="#components-2">Components</a></li><li><a href="#when-to-use-2">When to Use</a></li><li><a href="#upgrade-when-2">Upgrade When</a></li></ul></li><li><a href="#level-3-distributed">Level 3: Distributed</a><ul><li><a href="#components-3">Components</a></li><li><a href="#when-to-use-3">When to Use</a></li><li><a href="#upgrade-when-3">Upgrade When</a></li></ul></li><li><a href="#level-4-enterprise">Level 4: Enterprise</a><ul><li><a href="#components-4">Components</a></li><li><a href="#when-to-use-4">When to Use</a></li></ul></li><li><a href="#choosing-the-right-level">Choosing the Right Level</a><ul><li><a href="#decision-framework">Decision Framework</a></li><li><a href="#common-mistakes-to-avoid">Common Mistakes to Avoid</a></li></ul></li><li><a href="#upgrading-between-levels">Upgrading Between Levels</a></li><li><a href="#downgrading">Downgrading</a></li></ul>
+            </nav>
+          </aside>
+        
+        <p>Kyros uses a progressive architecture approach with 5 distinct levels. Each level builds upon the previous one, adding complexity only when justified by data scale and requirements.</p>
+
+<h2 id="level-overview">Level Overview</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Level</th>
+      <th>Name</th>
+      <th>Stack</th>
+      <th>Data Size</th>
+      <th>Monthly Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>0</strong></td>
+      <td>Local</td>
+      <td>DuckDB + dbt</td>
+      <td>&lt; 50 GB</td>
+      <td>$0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>1</strong></td>
+      <td>Team</td>
+      <td>+ PostgreSQL + Dagster + Superset</td>
+      <td>&lt; 500 GB</td>
+      <td>$20-100</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>2</strong></td>
+      <td>Data Lake</td>
+      <td>+ MinIO + JupyterLab + Grafana</td>
+      <td>&lt; 1 TB</td>
+      <td>$50-150</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>3</strong></td>
+      <td>Distributed</td>
+      <td>+ Spark + Trino</td>
+      <td>1+ TB</td>
+      <td>$150-500</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>4</strong></td>
+      <td>Enterprise</td>
+      <td>+ Kafka + Flink</td>
+      <td>Any</td>
+      <td>$500+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="level-0-local-development">Level 0: Local Development</h2>
+
+<p><strong>Best for:</strong> Individual analysts, learning, prototyping</p>
+
+<h3 id="components">Components</h3>
+<ul>
+  <li><strong>DuckDB</strong> - In-process analytical database</li>
+  <li><strong>dbt</strong> - SQL transformations and data modeling</li>
+</ul>
+
+<h3 id="when-to-use">When to Use</h3>
+<ul>
+  <li>Data fits in memory (&lt; 50 GB)</li>
+  <li>Single user / no collaboration needed</li>
+  <li>Learning data engineering concepts</li>
+  <li>Prototyping pipelines before deployment</li>
+</ul>
+
+<h3 id="upgrade-when">Upgrade When</h3>
+<ul>
+  <li>Need shared database access</li>
+  <li>Need scheduled pipelines</li>
+  <li>Need dashboards for stakeholders</li>
+  <li>Data exceeds 50 GB</li>
+</ul>
+
+<h2 id="level-1-team">Level 1: Team</h2>
+
+<p><strong>Best for:</strong> Small teams, startups, departmental analytics</p>
+
+<h3 id="components-1">Components</h3>
+<ul>
+  <li>Everything from Level 0, plus:</li>
+  <li><strong>PostgreSQL</strong> - Shared relational database</li>
+  <li><strong>Dagster</strong> - Pipeline orchestration</li>
+  <li><strong>Superset</strong> - BI dashboards</li>
+  <li><strong>Portainer</strong> - Container management</li>
+  <li><strong>CloudBeaver</strong> - Database UI</li>
+</ul>
+
+<h3 id="when-to-use-1">When to Use</h3>
+<ul>
+  <li>Team needs shared database</li>
+  <li>Need scheduled ETL pipelines</li>
+  <li>Need self-service dashboards</li>
+  <li>Data 50 GB - 500 GB</li>
+</ul>
+
+<h3 id="upgrade-when-1">Upgrade When</h3>
+<ul>
+  <li>Need object storage (S3-like)</li>
+  <li>Need notebook environment</li>
+  <li>Need monitoring/observability</li>
+  <li>Data exceeds 500 GB</li>
+</ul>
+
+<h2 id="level-2-data-lake">Level 2: Data Lake</h2>
+
+<p><strong>Best for:</strong> Growing teams, data science workflows</p>
+
+<h3 id="components-2">Components</h3>
+<ul>
+  <li>Everything from Level 1, plus:</li>
+  <li><strong>MinIO</strong> - S3-compatible object storage</li>
+  <li><strong>JupyterLab</strong> - Notebooks for analysis</li>
+  <li><strong>Grafana</strong> - Monitoring dashboards</li>
+  <li><strong>Loki</strong> - Log aggregation</li>
+  <li><strong>Promtail</strong> - Log collection</li>
+</ul>
+
+<h3 id="when-to-use-2">When to Use</h3>
+<ul>
+  <li>Need to store raw files (CSV, Parquet, JSON)</li>
+  <li>Data scientists need notebooks</li>
+  <li>Need operational monitoring</li>
+  <li>Data 500 GB - 1 TB</li>
+</ul>
+
+<h3 id="upgrade-when-2">Upgrade When</h3>
+<ul>
+  <li>Single-node processing is too slow</li>
+  <li>Need federated queries across sources</li>
+  <li>Data exceeds 1 TB</li>
+</ul>
+
+<h2 id="level-3-distributed">Level 3: Distributed</h2>
+
+<p><strong>Best for:</strong> Large datasets, complex transformations</p>
+
+<h3 id="components-3">Components</h3>
+<ul>
+  <li>Everything from Level 2, plus:</li>
+  <li><strong>Spark</strong> - Distributed processing</li>
+  <li><strong>Trino</strong> - Federated SQL queries</li>
+  <li><strong>Code Server</strong> - VS Code in browser</li>
+</ul>
+
+<h3 id="when-to-use-3">When to Use</h3>
+<ul>
+  <li>Data exceeds 1 TB</li>
+  <li>Need distributed compute</li>
+  <li>Need to query multiple data sources</li>
+  <li>Complex transformations that can’t run on single node</li>
+</ul>
+
+<h3 id="upgrade-when-3">Upgrade When</h3>
+<ul>
+  <li>Need real-time streaming</li>
+  <li>Need event-driven architecture</li>
+  <li>Enterprise compliance requirements</li>
+</ul>
+
+<h2 id="level-4-enterprise">Level 4: Enterprise</h2>
+
+<p><strong>Best for:</strong> Enterprise scale, real-time requirements</p>
+
+<h3 id="components-4">Components</h3>
+<ul>
+  <li>Everything from Level 3, plus:</li>
+  <li><strong>Kafka</strong> - Event streaming</li>
+  <li><strong>Flink</strong> - Stream processing</li>
+  <li><strong>Traefik</strong> - Reverse proxy with HTTPS</li>
+  <li>Full observability stack</li>
+</ul>
+
+<h3 id="when-to-use-4">When to Use</h3>
+<ul>
+  <li>Real-time data requirements</li>
+  <li>Event-driven architecture</li>
+  <li>Enterprise-scale operations</li>
+  <li>Any data scale</li>
+</ul>
+
+<h2 id="choosing-the-right-level">Choosing the Right Level</h2>
+
+<h3 id="decision-framework">Decision Framework</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────────┐
+│                    CHOOSING YOUR LEVEL                          │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  1. How much data do you have?                                 │
+│     &lt; 50 GB     → Start at Level 0                             │
+│     50-500 GB   → Start at Level 1                             │
+│     500 GB-1 TB → Start at Level 2                             │
+│     1+ TB       → Start at Level 3                             │
+│                                                                 │
+│  2. Do you need real-time?                                     │
+│     No          → Levels 0-3 are fine                          │
+│     Yes         → You need Level 4                             │
+│                                                                 │
+│  3. How many users?                                            │
+│     Just me     → Level 0 or 1                                 │
+│     Small team  → Level 1 or 2                                 │
+│     Enterprise  → Level 3 or 4                                 │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h3>
+
+<ol>
+  <li><strong>Starting at Level 3 with 10 GB of data</strong>
+    <ul>
+      <li>Spark adds operational complexity</li>
+      <li>PostgreSQL + dbt handles 10 GB easily</li>
+    </ul>
+  </li>
+  <li><strong>Skipping Level 2 observability</strong>
+    <ul>
+      <li>You need logs and monitoring before scaling</li>
+      <li>Debug issues before they become disasters</li>
+    </ul>
+  </li>
+  <li><strong>Adding Kafka without real-time requirements</strong>
+    <ul>
+      <li>Kafka adds significant complexity</li>
+      <li>Batch processing handles most use cases</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="upgrading-between-levels">Upgrading Between Levels</h2>
+
+<p>Kyros makes upgrading easy:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Currently at Level 1, want to add Level 2 components</span>
+<span class="nb">cp </span>presets/level-2.env .env
+make generate
+make up
+</code></pre></div></div>
+
+<p>Your existing data in PostgreSQL persists. New components are added alongside existing ones.</p>
+
+<h2 id="downgrading">Downgrading</h2>
+
+<p>Need to reduce costs or complexity?</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Scale back to Level 1</span>
+<span class="nb">cp </span>presets/level-1.env .env
+make generate
+make up
+</code></pre></div></div>
+
+<p>Unused services stop, but volumes persist if you need to scale back up later.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-03-20">March 20, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/kyros-io/docs/quick-start-guide/" class="pagination--pager" title="Quick-Start Guide
+">Previous</a>
+    
+    
+      <a href="/kyros-io/docs/components/" class="pagination--pager" title="Components Reference
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      <div align="center" style="margin: 1em 0;">
+  <ins class="adsbygoogle"
+        style="display:block; border-bottom: initial;"
+        data-ad-client="ca-pub-7328585512091257"
+        data-ad-slot="3049671934"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/benjamin-berhault/kyros" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/benjaminberhault/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+    
+
+    
+      <li><a href="/kyros-io/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://benjamin-berhault.github.io">Kyros - Data Platform at the Right Scale</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+<!-- 
+    
+  <script src="/kyros-io/assets/js/main.min.js"></script>
+
+
+<script>
+// Including InstantSearch.js library and styling
+const loadSearch = function() {
+  const loadCSS = function(src) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = src;
+    link.media = 'all';
+    document.head.appendChild(link);
+  };
+
+  var script = document.createElement('script');
+  script.setAttribute("type", "text/javascript");
+  script.setAttribute("src", "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js");
+  script.addEventListener("load", function() {
+    // Instantiating InstantSearch.js with Algolia credentials
+    const search = instantsearch({
+      appId: '',
+      apiKey: '',
+      indexName: '',
+      searchParameters: {
+        restrictSearchableAttributes: ['title', 'content']
+      }
+    });
+
+    const hitTemplate = function(hit) {
+      const url = hit.url;
+      const hightlight = hit._highlightResult;
+      const title = hightlight.title && hightlight.title.value  || "";
+      const content = hightlight.html && hightlight.html.value  || "";
+
+      return `
+        <div class="list__item">
+          <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+            <h2 class="archive__item-title" itemprop="headline"><a href="/kyros-io${url}">${title}</a></h2>
+            <div class="archive__item-excerpt" itemprop="description">${content}</div>
+          </article>
+        </div>
+      `;
+    }
+
+    // Adding searchbar and results widgets
+    search.addWidget(
+      instantsearch.widgets.searchBox({
+        container: '.search-searchbar',
+        poweredBy: true,
+        placeholder: 'Enter your search term...'
+      })
+    );
+    search.addWidget(
+      instantsearch.widgets.hits({
+        container: '.search-hits',
+        templates: {
+          item: hitTemplate,
+          empty: 'No results',
+        }
+      })
+    );
+
+    if (!search.started) {
+      search.start();
+    }
+  });
+  document.body.appendChild(script);
+
+  loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css");
+  loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css");
+};
+
+// Starting the search only when toggle is clicked
+$(document).ready(function() {
+  var scriptLoaded = false;
+
+  $(".search__toggle").on("click", function() {
+    if (!scriptLoaded) {
+      loadSearch();
+      scriptLoaded = true;
+    }
+  });
+});
+</script>
+
+
+
+
+<style>
+.google-auto-placed {
+  margin: 2em auto;
+}
+</style>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+
+ -->
+  </body>
+</html>

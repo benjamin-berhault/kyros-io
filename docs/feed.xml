@@ -1,27 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-24T22:45:24+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">🚧 Kyros - Open-Source Data Platform</title><subtitle>Kyros is a cloud-agnostic, modular, and customizable data platform offering affordable deployment and scalability.</subtitle><author><name>Kyros</name></author><entry><title type="html">Introducing Kyros: A New Era of Cloud-Agnostic Data Platforms</title><link href="http://localhost:4000/announcement/welcome-to-kyros/" rel="alternate" type="text/html" title="Introducing Kyros: A New Era of Cloud-Agnostic Data Platforms" /><published>2024-09-24T00:00:00+02:00</published><updated>2024-09-24T00:00:00+02:00</updated><id>http://localhost:4000/announcement/welcome-to-kyros</id><content type="html" xml:base="http://localhost:4000/announcement/welcome-to-kyros/"><![CDATA[<p>We are thrilled to announce the upcoming launch of <strong>Kyros</strong>, a cloud-agnostic, modular, and fully customizable data platform designed to offer an affordable and scalable alternative to traditional cloud solutions.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://benjamin-berhault.github.io/kyros-io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://benjamin-berhault.github.io/kyros-io/" rel="alternate" type="text/html" /><updated>2026-03-20T12:19:05+01:00</updated><id>https://benjamin-berhault.github.io/kyros-io/feed.xml</id><title type="html">Kyros - Data Platform at the Right Scale</title><subtitle>Deploy the right data architecture at the right time. Start simple with DuckDB, scale to Spark when justified. Open-source, cloud-agnostic, modular.</subtitle><author><name>Kyros</name></author><entry><title type="html">Introducing Kyros: Data Platform at the Right Scale</title><link href="https://benjamin-berhault.github.io/kyros-io/announcement/welcome-to-kyros/" rel="alternate" type="text/html" title="Introducing Kyros: Data Platform at the Right Scale" /><published>2024-09-24T00:00:00+02:00</published><updated>2024-09-24T00:00:00+02:00</updated><id>https://benjamin-berhault.github.io/kyros-io/announcement/welcome-to-kyros</id><content type="html" xml:base="https://benjamin-berhault.github.io/kyros-io/announcement/welcome-to-kyros/"><![CDATA[<p>We are excited to introduce <strong>Kyros</strong>, an open-source data platform that grows with your needs. Start simple, scale when ready.</p>
 
-<h3 id="what-is-kyros">What is Kyros?</h3>
+<h2 id="the-problem">The Problem</h2>
 
-<p>Kyros is an open-source platform, Apache-licensed, built to empower data engineers and businesses to <strong>design, deploy, and manage</strong> their data platforms with flexibility and ease. Whether you are working with large-scale data processing or simply need a cost-effective solution for your business, Kyros is here to simplify your infrastructure needs.</p>
-
-<p><strong>Key Features:</strong></p>
+<p>Building a data platform usually means choosing between:</p>
 
 <ul>
-  <li><strong>Modular Architecture:</strong> Deploy only what you need, with integrations for tools like Apache Spark, dbt, and Apache Flink.</li>
-  <li><strong>Cost-Effective Hosting:</strong> Take advantage of affordable hosting services with predictable and transparent pricing.</li>
-  <li><strong>Open-Source:</strong> Completely open-source and licensed under Apache 2.0, Kyros supports modern data storage formats such as Delta Lake, Apache Iceberg, and Apache Pinot.</li>
-  <li><strong>Cloud-Agnostic:</strong> Avoid vendor lock-in and enjoy the flexibility to run Kyros on any infrastructure.</li>
-  <li><strong>Seamless Integration:</strong> Built to easily integrate with your existing tools and workflows, reducing operational complexity.</li>
+  <li><strong>Simple tools</strong> that work today but won’t scale</li>
+  <li><strong>Enterprise platforms</strong> with complexity you don’t need yet</li>
 </ul>
 
-<h3 id="why-kyros">Why Kyros?</h3>
+<p>Either way, you end up rewriting infrastructure as your needs change.</p>
 
-<p>The complexity, limitations, and costs of proprietary platforms like Databricks inspired the development of Kyros. We aim to simplify data infrastructure, reduce costs, and offer a scalable solution that evolves with your needs — all while remaining <strong>vendor-independent</strong>.</p>
+<h2 id="the-kyros-approach">The Kyros Approach</h2>
 
-<p>With <strong>Kyros</strong>, you get <strong>predictable pricing</strong>, <strong>modular deployments</strong>, and an <strong>easy-to-manage</strong> platform. Perfect for teams with fluctuating workloads or those looking for an alternative to the overly complicated and costly options out there.</p>
+<p>Kyros solves this with <strong>5 architecture levels</strong>:</p>
 
-<p>Stay tuned as we get closer to the official launch of Kyros! In the meantime, <a href="https://github.com/kyros-studio/kyros">follow us on GitHub</a> for updates, and be part of the future of cloud-agnostic data platforms.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>What You Get</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Level 0</strong></td>
+      <td>Dagster + PostgreSQL for learning and prototyping</td>
+    </tr>
+    <tr>
+      <td><strong>Level 1</strong></td>
+      <td>Add Superset for BI dashboards</td>
+    </tr>
+    <tr>
+      <td><strong>Level 2</strong></td>
+      <td>Add Grafana + Loki for production monitoring</td>
+    </tr>
+    <tr>
+      <td><strong>Level 3</strong></td>
+      <td>Add Spark + MinIO for distributed processing</td>
+    </tr>
+    <tr>
+      <td><strong>Level 4</strong></td>
+      <td>Add JupyterLab for full analytics workbench</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Each level builds on the previous. Your pipelines, dashboards, and configurations carry forward—no rewrites needed.</p>
+
+<h2 id="key-features">Key Features</h2>
+
+<ul>
+  <li><strong>Progressive scaling</strong> - Start with Level 1, grow to Level 4</li>
+  <li><strong>Cloud-agnostic</strong> - Runs anywhere Docker runs</li>
+  <li><strong>Production-ready</strong> - HTTPS, secrets management, backup/restore</li>
+  <li><strong>Observable</strong> - Centralized logging with Grafana and Loki</li>
+  <li><strong>Open source</strong> - Apache 2.0 licensed</li>
+</ul>
+
+<h2 id="get-started">Get Started</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/benjamin-berhault/kyros.git
+<span class="nb">cd </span>kyros
+make level-1
+</code></pre></div></div>
+
+<p>You’ll have PostgreSQL, Dagster, and Superset running in minutes.</p>
+
+<h2 id="learn-more">Learn More</h2>
+
+<ul>
+  <li><a href="https://benjamin-berhault.github.io/kyros-io/docs/quick-start-guide/">Documentation</a></li>
+  <li><a href="https://github.com/benjamin-berhault/kyros">GitHub Repository</a></li>
+  <li><a href="https://benjamin-berhault.github.io/kyros-io/docs/architecture-levels/">Architecture Levels</a></li>
+</ul>
 
 <hr />
 
-<p>Follow our journey as we prepare to redefine the way data platforms are designed, deployed, and managed. More exciting updates are on the way, so be sure to subscribe for the latest news!</p>]]></content><author><name>Kyros</name></author><category term="announcement" /><category term="kyros" /><category term="cloud-agnostic" /><category term="data-platform" /><category term="open-source" /><summary type="html"><![CDATA[We are thrilled to announce the upcoming launch of Kyros, a cloud-agnostic, modular, and fully customizable data platform designed to offer an affordable and scalable alternative to traditional cloud solutions.]]></summary></entry></feed>
+<p>Kyros is designed to make data engineering accessible—whether you’re a solo developer learning pipelines or a team running production workloads.</p>]]></content><author><name>Kyros</name></author><category term="announcement" /><category term="kyros" /><category term="data-platform" /><category term="open-source" /><summary type="html"><![CDATA[We are excited to introduce Kyros, an open-source data platform that grows with your needs. Start simple, scale when ready.]]></summary></entry></feed>

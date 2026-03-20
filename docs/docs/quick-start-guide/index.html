@@ -6,12 +6,12 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<html lang="fr-FR" class="no-js">
+<html lang="en-US" class="no-js">
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>🚧 Kyros Quick-Start Guide - 🚧 Kyros - Open-Source Data Platform</title>
-<meta name="description" content="How to quickly install and setup Kyros.">
+<!-- begin _includes/seo.html --><title>Quick-Start Guide - Kyros - Data Platform at the Right Scale</title>
+<meta name="description" content="Get Kyros running in under 5 minutes.">
 
 
   <meta name="author" content="Kyros">
@@ -21,32 +21,32 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:site_name" content="🚧 Kyros - Open-Source Data Platform">
-<meta property="og:title" content="🚧 Kyros Quick-Start Guide">
-<meta property="og:url" content="http://localhost:4000/docs/quick-start-guide/">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Kyros - Data Platform at the Right Scale">
+<meta property="og:title" content="Quick-Start Guide">
+<meta property="og:url" content="https://benjamin-berhault.github.io/kyros-io/docs/quick-start-guide/">
 
 
-  <meta property="og:description" content="How to quickly install and setup Kyros.">
-
-
-
-  <meta property="og:image" content="http://localhost:4000/assets/images/kyros-logo-1200x630-og_image.png">
+  <meta property="og:description" content="Get Kyros running in under 5 minutes.">
 
 
 
-
-
-  <meta property="article:published_time" content="2024-09-24T22:45:24+02:00">
-
-
-
-  <meta property="article:modified_time" content="2024-09-24T14:48:05+02:00">
+  <meta property="og:image" content="https://benjamin-berhault.github.io/kyros-io/assets/images/kyros-logo-1200x630-og_image.png">
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/quick-start-guide/">
+
+  <meta property="article:published_time" content="2026-03-20T12:19:05+01:00">
+
+
+
+  <meta property="article:modified_time" content="2025-03-20T00:00:00+01:00">
+
+
+
+
+<link rel="canonical" href="https://benjamin-berhault.github.io/kyros-io/docs/quick-start-guide/">
 
 
 
@@ -63,7 +63,7 @@
 
 
 
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="🚧 Kyros - Open-Source Data Platform Feed">
+  <link href="/kyros-io/feed.xml" type="application/atom+xml" rel="alternate" title="Kyros - Data Platform at the Right Scale Feed">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -72,7 +72,7 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/kyros-io/assets/css/main.css">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
@@ -102,27 +102,33 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-          <a class="site-logo" href="/"><img src="/assets/images/kyros-logo-88-alpha.png" alt="Kyros"></a>
+          <a class="site-logo" href="/kyros-io/"><img src="/kyros-io/assets/images/kyros-logo-88-alpha.png" alt="Kyros"></a>
         
-        <a class="site-title" href="/">
+        <a class="site-title" href="/kyros-io/">
           Kyros
-          <span class="site-subtitle">Empowering Data, Simplifying Cloud</span>
+          <span class="site-subtitle">Right tool • Right time • Right cost</span>
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a
-                href="/docs/quick-start-guide/"
+                href="/kyros-io/docs/quick-start-guide/"
                 
                 
-              >Quick-Start Guide</a>
+              >Quick-Start</a>
             </li><li class="masthead__menu-item">
               <a
-                href="/year-archive/"
+                href="/kyros-io/docs/architecture-levels/"
                 
                 
-              >Posts</a>
+              >Docs</a>
             </li><li class="masthead__menu-item">
               <a
-                href="/about/"
+                href="https://github.com/benjamin-berhault/kyros"
+                
+                
+              >GitHub</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/kyros-io/about/"
                 
                 
               >About</a>
@@ -142,7 +148,6 @@
     </div>
   </div>
 </div>
-
 
     <div class="initial-content">
       
@@ -179,7 +184,45 @@
           
           <ul>
             
-              <li><a href="/docs/quick-start-guide/" class="active">Quick-Start Guide</a></li>
+              <li><a href="/kyros-io/docs/quick-start-guide/" class="active">Quick-Start Guide</a></li>
+            
+              <li><a href="/kyros-io/docs/architecture-levels/">Architecture Levels</a></li>
+            
+              <li><a href="/kyros-io/docs/components/">Components Reference</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Operations</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/kyros-io/docs/observability/">Observability</a></li>
+            
+              <li><a href="/kyros-io/docs/security/">Security</a></li>
+            
+              <li><a href="/kyros-io/docs/backup-restore/">Backup & Restore</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Production</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/kyros-io/docs/traefik/">Traefik & HTTPS</a></li>
+            
+              <li><a href="/kyros-io/docs/production/">Production Checklist</a></li>
             
           </ul>
           
@@ -196,16 +239,16 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="🚧 Kyros Quick-Start Guide">
-    <meta itemprop="description" content="How to quickly install and setup Kyros.">
-    <meta itemprop="datePublished" content="2024-09-24T22:45:24+02:00">
-    <meta itemprop="dateModified" content="2024-09-24T14:48:05+02:00">
+    <meta itemprop="headline" content="Quick-Start Guide">
+    <meta itemprop="description" content="Get Kyros running in under 5 minutes.">
+    <meta itemprop="datePublished" content="2026-03-20T12:19:05+01:00">
+    <meta itemprop="dateModified" content="2025-03-20T00:00:00+01:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/docs/quick-start-guide/" itemprop="url">🚧 Kyros Quick-Start Guide
+            <a href="https://benjamin-berhault.github.io/kyros-io/docs/quick-start-guide/" itemprop="url">Quick-Start Guide
 </a>
           </h1>
           
@@ -219,119 +262,310 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#installing-kyros">Installing Kyros</a><ul><li><a href="#docker-based-installation">Docker-Based Installation</a></li><li><a href="#system-requirements">System Requirements</a></li><li><a href="#configuration">Configuration</a></li><li><a href="#hosting-kyros-on-a-cloud-provider">Hosting Kyros on a Cloud Provider</a></li></ul></li><li><a href="#updating-kyros">Updating Kyros</a></li><li><a href="#customizing-kyros">Customizing Kyros</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul>
+              <ul class="toc__menu"><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#installation">Installation</a><ul><li><a href="#1-clone-the-repository">1. Clone the Repository</a></li><li><a href="#2-choose-your-architecture-level">2. Choose Your Architecture Level</a></li><li><a href="#3-deploy">3. Deploy</a></li></ul></li><li><a href="#accessing-services">Accessing Services</a></li><li><a href="#common-commands">Common Commands</a></li><li><a href="#custom-configuration">Custom Configuration</a></li><li><a href="#do-you-need-spark">Do You Need Spark?</a></li><li><a href="#production-deployment">Production Deployment</a></li><li><a href="#troubleshooting">Troubleshooting</a><ul><li><a href="#services-wont-start">Services won’t start</a></li><li><a href="#out-of-memory">Out of memory</a></li><li><a href="#port-conflicts">Port conflicts</a></li><li><a href="#view-service-logs">View service logs</a></li></ul></li><li><a href="#next-steps">Next Steps</a></li></ul>
             </nav>
           </aside>
         
-        <p>Kyros is designed to be easy to set up and use, allowing data engineers to deploy, customize, and scale data platforms affordably. Follow this guide to get Kyros up and running quickly.</p>
+        <p>Kyros makes it easy to deploy a complete data platform. Choose your architecture level and deploy with a single command.</p>
 
-<h2 id="installing-kyros">Installing Kyros</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 
-<p>Kyros can be installed as a Docker-based solution or directly on any affordable hosting platform. You can configure Kyros to include only the components you need, such as Apache Spark, dbt, and Apache Flink.</p>
+<ul>
+  <li><strong>Docker</strong> and <strong>Docker Compose</strong> (v2+)</li>
+  <li><strong>Python 3.8+</strong> (for the CLI)</li>
+  <li><strong>8GB+ RAM</strong> (16GB+ for Level 3+)</li>
+  <li><strong>Git</strong></li>
+</ul>
 
-<h3 id="docker-based-installation">Docker-Based Installation</h3>
+<h2 id="installation">Installation</h2>
 
-<p>If you prefer to use Kyros with Docker, follow these steps:</p>
+<h3 id="1-clone-the-repository">1. Clone the Repository</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/benjamin-berhault/kyros.git
+<span class="nb">cd </span>kyros
+</code></pre></div></div>
+
+<h3 id="2-choose-your-architecture-level">2. Choose Your Architecture Level</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Level</th>
+      <th>Name</th>
+      <th>What You Get</th>
+      <th>Data Size</th>
+      <th>Cost/Month</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>0</strong></td>
+      <td>Local</td>
+      <td>DuckDB + dbt</td>
+      <td>&lt; 50 GB</td>
+      <td>$0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>1</strong></td>
+      <td>Team</td>
+      <td>+ PostgreSQL + Dagster + Superset</td>
+      <td>&lt; 500 GB</td>
+      <td>$20-100</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>2</strong></td>
+      <td>Data Lake</td>
+      <td>+ MinIO + JupyterLab + Grafana</td>
+      <td>&lt; 1 TB</td>
+      <td>$50-150</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>3</strong></td>
+      <td>Distributed</td>
+      <td>+ Spark + Trino</td>
+      <td>1+ TB</td>
+      <td>$150-500</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>4</strong></td>
+      <td>Enterprise</td>
+      <td>+ Kafka + Flink</td>
+      <td>Any</td>
+      <td>$500+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="3-deploy">3. Deploy</h3>
+
+<p><strong>Option A: Use Makefile (Recommended)</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Deploy Level 1 (Team stack)</span>
+make level-1
+
+<span class="c"># Or Level 2 (Data Lake)</span>
+make level-2
+
+<span class="c"># Or Level 3 (Distributed)</span>
+make level-3
+</code></pre></div></div>
+
+<p><strong>Option B: Interactive CLI</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./kyros-cli.py
+</code></pre></div></div>
+
+<p>The CLI guides you through:</p>
+<ul>
+  <li>Selecting a level or custom configuration</li>
+  <li>Choosing specific components</li>
+  <li>Setting Spark worker count</li>
+  <li>Deploying with real-time build logs</li>
+</ul>
+
+<p><strong>Option C: Manual Configuration</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Copy a preset</span>
+<span class="nb">cp </span>presets/level-1.env .env
+
+<span class="c"># Generate docker-compose.yml</span>
+make generate
+
+<span class="c"># Start services</span>
+make up
+</code></pre></div></div>
+
+<h2 id="accessing-services">Accessing Services</h2>
+
+<p>After deployment, access services at:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>URL</th>
+      <th>Default Credentials</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kyros Dashboard</td>
+      <td>http://localhost:5000</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Superset</td>
+      <td>http://localhost:8088</td>
+      <td>admin / admin</td>
+    </tr>
+    <tr>
+      <td>Dagster</td>
+      <td>http://localhost:3000</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Grafana</td>
+      <td>http://localhost:3002</td>
+      <td>admin / admin</td>
+    </tr>
+    <tr>
+      <td>JupyterLab</td>
+      <td>http://localhost:8888</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>MinIO Console</td>
+      <td>http://localhost:9001</td>
+      <td>kyros / kyros_dev</td>
+    </tr>
+    <tr>
+      <td>Portainer</td>
+      <td>http://localhost:9000</td>
+      <td>(set on first login)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="common-commands">Common Commands</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># View all available commands</span>
+make <span class="nb">help</span>
+
+<span class="c"># Check service status</span>
+make status
+
+<span class="c"># View logs</span>
+make logs
+
+<span class="c"># Stop all services</span>
+make down
+
+<span class="c"># Restart services</span>
+make restart
+</code></pre></div></div>
+
+<h2 id="custom-configuration">Custom Configuration</h2>
+
+<p>Edit <code class="language-plaintext highlighter-rouge">.env</code> to enable/disable specific components:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Components</span>
+<span class="nv">INCLUDE_POSTGRES</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">INCLUDE_DAGSTER</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">INCLUDE_SUPERSET</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">INCLUDE_MINIO</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">INCLUDE_JUPYTERLAB</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">INCLUDE_GRAFANA</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">INCLUDE_LOKI</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">INCLUDE_TRINO</span><span class="o">=</span><span class="nb">false
+</span><span class="nv">INCLUDE_KAFKA</span><span class="o">=</span><span class="nb">false
+</span><span class="nv">INCLUDE_FLINK</span><span class="o">=</span><span class="nb">false</span>
+
+<span class="c"># Spark workers (Level 3+)</span>
+<span class="nv">WORKERS</span><span class="o">=</span>2
+
+<span class="c"># Resources</span>
+<span class="nv">SPARK_WORKER_MEMORY</span><span class="o">=</span>2G
+<span class="nv">SPARK_WORKER_CORES</span><span class="o">=</span>2
+</code></pre></div></div>
+
+<p>After editing, regenerate and restart:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make generate
+make up
+</code></pre></div></div>
+
+<h2 id="do-you-need-spark">Do You Need Spark?</h2>
+
+<p>Before deploying Level 3+, ask yourself:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data Size</th>
+      <th>Recommendation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt; 10 GB</td>
+      <td>PostgreSQL + dbt or DuckDB. Spark is overkill.</td>
+    </tr>
+    <tr>
+      <td>10-100 GB</td>
+      <td>DuckDB or PostgreSQL + dbt. Spark optional.</td>
+    </tr>
+    <tr>
+      <td>100 GB - 1 TB</td>
+      <td>PostgreSQL/warehouse + dbt. Spark starts making sense.</td>
+    </tr>
+    <tr>
+      <td>1+ TB</td>
+      <td>Spark is justified. Consider Trino for federated queries.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="production-deployment">Production Deployment</h2>
+
+<p>For production environments:</p>
 
 <ol>
-  <li>
-    <p>Clone the <a href="https://github.com/kyroslabs/kyros-project">Kyros repository</a>:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/kyroslabs/kyros-project
-<span class="nb">cd </span>kyros-project
+  <li><strong>Generate secure secrets:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make secrets
 </code></pre></div>    </div>
   </li>
-  <li>
-    <p>Build and run the Kyros Docker containers:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up <span class="nt">--build</span>
+  <li><strong>Enable Docker secrets:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make secrets-enable
 </code></pre></div>    </div>
   </li>
-  <li>
-    <p>Kyros should now be running. You can access the various services (like JupyterLab, MinIO, etc.) by navigating to the provided URLs in the terminal output.</p>
-
-    <ul>
-      <li><a href="http://localhost:8888">JupyterLab</a></li>
-      <li><a href="http://localhost:9002">MinIO</a></li>
-      <li><a href="http://localhost:8080">Apache Spark UI</a></li>
-    </ul>
+  <li><strong>Enable HTTPS with Traefik:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Add to .env</span>
+<span class="nv">INCLUDE_TRAEFIK</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">DOMAIN</span><span class="o">=</span>yourdomain.com
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Set up backups:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make backup
+</code></pre></div>    </div>
   </li>
 </ol>
 
-<p>For more details on how to customize your deployment, refer to the <a href="/docs/configuration/">Configuration Guide</a>.</p>
-
-<h3 id="system-requirements">System Requirements</h3>
-
-<p>Kyros is designed to run on minimal hardware, but for optimal performance, the following resources are recommended:</p>
-
-<ul>
-  <li><strong>CPU</strong>: 4+ cores</li>
-  <li><strong>Memory</strong>: 8GB+</li>
-  <li><strong>Storage</strong>: 50GB+ (SSD preferred)</li>
-</ul>
-
-<h3 id="configuration">Configuration</h3>
-
-<p>Kyros can be customized via the <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file. You can enable or disable components like Apache Spark, dbt, and Flink as needed. Here’s an example of how to configure the environment:</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">services</span><span class="pi">:</span>
-  <span class="na">spark-master</span><span class="pi">:</span>
-    <span class="na">image</span><span class="pi">:</span> <span class="s">kyroslabs/spark:latest</span>
-    <span class="na">ports</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s2">"</span><span class="s">8080:8080"</span>
-  <span class="na">jupyterlab</span><span class="pi">:</span>
-    <span class="na">image</span><span class="pi">:</span> <span class="s">kyroslabs/jupyterlab:latest</span>
-    <span class="na">environment</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">JUPYTER_TOKEN=kyros</span>
-</code></pre></div></div>
-
-<h3 id="hosting-kyros-on-a-cloud-provider">Hosting Kyros on a Cloud Provider</h3>
-
-<ol>
-  <li>Spin up a new <strong>cloud instance</strong> from your preferred cloud provider.</li>
-  <li>
-    <p>SSH into your instance and install Docker:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
-<span class="nb">sudo </span>apt <span class="nb">install </span>docker docker-compose
-</code></pre></div>    </div>
-  </li>
-  <li>Clone the Kyros repository and follow the same steps outlined above for Docker installation.</li>
-</ol>
-
-<h2 id="updating-kyros">Updating Kyros</h2>
-
-<p>To update Kyros to the latest version, you can pull the latest changes from the repository and rebuild the Docker containers:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull origin main
-docker-compose up <span class="nt">--build</span>
-</code></pre></div></div>
-
-<h2 id="customizing-kyros">Customizing Kyros</h2>
-
-<p>Kyros is fully customizable. You can add, remove, or modify services in the <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file. Some of the key components you can customize:</p>
-
-<ul>
-  <li><strong>Apache Spark</strong> for large-scale data processing</li>
-  <li><strong>dbt</strong> for building data pipelines and transformations</li>
-  <li><strong>Apache Flink</strong> for real-time stream processing</li>
-  <li><strong>MinIO</strong> for S3-compatible object storage</li>
-</ul>
-
-<p>Refer to the <a href="/docs/customization/">Customization Guide</a> for more details on configuring each service.</p>
+<p>See <a href="/docs/security/">Security Guide</a> and <a href="/docs/production/">Production Guide</a> for more details.</p>
 
 <h2 id="troubleshooting">Troubleshooting</h2>
 
-<p>If you encounter issues, please check the logs for the service in question. For example, to view the logs for the <strong>Spark Master</strong>:</p>
+<h3 id="services-wont-start">Services won’t start</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose logs spark-master
+<p>Check Docker is running and has enough resources:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker info
+docker compose ps
 </code></pre></div></div>
 
-<p>You can also check the <a href="https://github.com/kyroslabs/kyros-project/issues">Kyros GitHub Issues</a> for known issues and troubleshooting tips.</p>
+<h3 id="out-of-memory">Out of memory</h3>
 
-<hr />
+<p>Reduce the number of services or increase Docker memory limit. Start with Level 1 and add components gradually.</p>
 
-<p>That’s it! You should now have Kyros running on your local machine or hosting platform. For more advanced setup options, refer to the <a href="/docs/advanced-configuration/">Advanced Configuration Guide</a>.</p>
+<h3 id="port-conflicts">Port conflicts</h3>
+
+<p>Check if ports are already in use:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-i</span> :3000  <span class="c"># Check Dagster port</span>
+lsof <span class="nt">-i</span> :8088  <span class="c"># Check Superset port</span>
+</code></pre></div></div>
+
+<h3 id="view-service-logs">View service logs</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose logs dagster
+docker compose logs superset
+</code></pre></div></div>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li><a href="/docs/architecture-levels/">Architecture Levels</a> - Deep dive into each level</li>
+  <li><a href="/docs/components/">Components Reference</a> - All available components</li>
+  <li><a href="/docs/observability/">Observability</a> - Monitoring with Grafana + Loki</li>
+  <li><a href="/docs/security/">Security</a> - Secrets management and HTTPS</li>
+</ul>
 
         
       </section>
@@ -343,13 +577,23 @@ docker-compose up <span class="nt">--build</span>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-09-24">September 24, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-03-20">March 20, 2025</time></p>
 
       </footer>
 
       
 
       
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/kyros-io/docs/architecture-levels/" class="pagination--pager" title="Architecture Levels
+">Next</a>
+    
+  </nav>
+
     </div>
 
     
@@ -390,24 +634,28 @@ docker-compose up <span class="nt">--build</span>
     
       
         
-          <li><a href="https://github.com/kyros-studio/kyros" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          <li><a href="https://github.com/benjamin-berhault/kyros" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/benjaminberhault/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
         
       
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/kyros-io/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">🚧 Kyros - Open-Source Data Platform</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 <a href="https://benjamin-berhault.github.io">Kyros - Data Platform at the Right Scale</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 <!-- 
     
-  <script src="/assets/js/main.min.js"></script>
+  <script src="/kyros-io/assets/js/main.min.js"></script>
 
 
 <script>
@@ -445,7 +693,7 @@ const loadSearch = function() {
       return `
         <div class="list__item">
           <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-            <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+            <h2 class="archive__item-title" itemprop="headline"><a href="/kyros-io${url}">${title}</a></h2>
             <div class="archive__item-excerpt" itemprop="description">${content}</div>
           </article>
         </div>
