@@ -82,5 +82,5 @@ levels_row:
 4. **Accessible by default** — A student and a startup should both find value here.
 5. **Honest about limitations** — This is a learning and launching platform, not enterprise software.
 
-[Get Started with Kyros](/docs/quick-start-guide/){: .btn .btn--success .btn--large}
+[Get Started with Kyros]({{ "/docs/quick-start-guide/" | relative_url }}){: .btn .btn--success .btn--large}
 [View on GitHub](https://github.com/benjamin-berhault/kyros){: .btn .btn--primary .btn--large}
