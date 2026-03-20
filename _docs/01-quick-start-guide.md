@@ -1,110 +1,217 @@
 ---
-title: "🚧 Kyros Quick-Start Guide"
+title: "Quick-Start Guide"
 permalink: /docs/quick-start-guide/
-excerpt: "How to quickly install and setup Kyros."
-last_modified_at: 2024-09-24T08:48:05-04:00
+excerpt: "Get Kyros running in under 5 minutes."
+last_modified_at: 2025-03-20
 redirect_from:
   - /setup/
 toc: true
 ---
 
-Kyros is designed to be easy to set up and use, allowing data engineers to deploy, customize, and scale data platforms affordably. Follow this guide to get Kyros up and running quickly.
+Kyros makes it easy to deploy a complete data platform. Choose your architecture level and deploy with a single command.
 
-## Installing Kyros
+## Prerequisites
 
-Kyros can be installed as a Docker-based solution or directly on any affordable hosting platform. You can configure Kyros to include only the components you need, such as Apache Spark, dbt, and Apache Flink.
+- **Docker** and **Docker Compose** (v2+)
+- **Python 3.8+** (for the CLI)
+- **8GB+ RAM** (16GB+ for Level 3+)
+- **Git**
 
-### Docker-Based Installation
+## Installation
 
-If you prefer to use Kyros with Docker, follow these steps:
-
-1. Clone the [Kyros repository](https://github.com/kyroslabs/kyros-project):
-
-   ```bash
-   git clone https://github.com/kyroslabs/kyros-project
-   cd kyros-project
-   ```
-
-2. Build and run the Kyros Docker containers:
-
-   ```bash
-   docker-compose up --build
-   ```
-
-3. Kyros should now be running. You can access the various services (like JupyterLab, MinIO, etc.) by navigating to the provided URLs in the terminal output.
-
-   - [JupyterLab](http://localhost:8888)
-   - [MinIO](http://localhost:9002)
-   - [Apache Spark UI](http://localhost:8080)
-
-For more details on how to customize your deployment, refer to the [Configuration Guide](/docs/configuration/).
-
-### System Requirements
-
-Kyros is designed to run on minimal hardware, but for optimal performance, the following resources are recommended:
-
-- **CPU**: 4+ cores
-- **Memory**: 8GB+
-- **Storage**: 50GB+ (SSD preferred)
-
-### Configuration
-
-Kyros can be customized via the `docker-compose.yml` file. You can enable or disable components like Apache Spark, dbt, and Flink as needed. Here’s an example of how to configure the environment:
-
-```yaml
-services:
-  spark-master:
-    image: kyroslabs/spark:latest
-    ports:
-      - "8080:8080"
-  jupyterlab:
-    image: kyroslabs/jupyterlab:latest
-    environment:
-      - JUPYTER_TOKEN=kyros
-```
-
-### Hosting Kyros on a Cloud Provider
-
-1. Spin up a new **cloud instance** from your preferred cloud provider.
-2. SSH into your instance and install Docker:
-
-   ```bash
-   sudo apt update
-   sudo apt install docker docker-compose
-   ```
-
-3. Clone the Kyros repository and follow the same steps outlined above for Docker installation.
-
-## Updating Kyros
-
-To update Kyros to the latest version, you can pull the latest changes from the repository and rebuild the Docker containers:
+### 1. Clone the Repository
 
 ```bash
-git pull origin main
-docker-compose up --build
+git clone https://github.com/benjamin-berhault/kyros.git
+cd kyros
 ```
 
-## Customizing Kyros
+### 2. Choose Your Architecture Level
 
-Kyros is fully customizable. You can add, remove, or modify services in the `docker-compose.yml` file. Some of the key components you can customize:
+| Level | Name | What You Get | Data Size | Cost/Month |
+|:-----:|------|--------------|-----------|------------|
+| **0** | Local | DuckDB + dbt | < 50 GB | $0 |
+| **1** | Team | + PostgreSQL + Dagster + Superset | < 500 GB | $20-100 |
+| **2** | Data Lake | + MinIO + JupyterLab + Grafana | < 1 TB | $50-150 |
+| **3** | Distributed | + Spark + Trino | 1+ TB | $150-500 |
+| **4** | Enterprise | + Kafka + Flink | Any | $500+ |
 
-- **Apache Spark** for large-scale data processing
-- **dbt** for building data pipelines and transformations
-- **Apache Flink** for real-time stream processing
-- **MinIO** for S3-compatible object storage
+### 3. Deploy
 
-Refer to the [Customization Guide](/docs/customization/) for more details on configuring each service.
+**Option A: Use Makefile (Recommended)**
+
+```bash
+# Deploy Level 1 (Team stack)
+make level-1
+
+# Or Level 2 (Data Lake)
+make level-2
+
+# Or Level 3 (Distributed)
+make level-3
+```
+
+**Option B: Interactive CLI**
+
+```bash
+./kyros-cli.py
+```
+
+The CLI guides you through:
+- Selecting a level or custom configuration
+- Choosing specific components
+- Setting Spark worker count
+- Deploying with real-time build logs
+
+**Option C: Manual Configuration**
+
+```bash
+# Copy a preset
+cp presets/level-1.env .env
+
+# Generate docker-compose.yml
+make generate
+
+# Start services
+make up
+```
+
+## Accessing Services
+
+After deployment, access services at:
+
+| Service | URL | Default Credentials |
+|---------|-----|---------------------|
+| Kyros Dashboard | http://localhost:5000 | - |
+| Superset | http://localhost:8088 | admin / admin |
+| Dagster | http://localhost:3000 | - |
+| Grafana | http://localhost:3002 | admin / admin |
+| JupyterLab | http://localhost:8888 | - |
+| MinIO Console | http://localhost:9001 | kyros / kyros_dev |
+| Portainer | http://localhost:9000 | (set on first login) |
+
+## Common Commands
+
+```bash
+# View all available commands
+make help
+
+# Check service status
+make status
+
+# View logs
+make logs
+
+# Stop all services
+make down
+
+# Restart services
+make restart
+```
+
+## Custom Configuration
+
+Edit `.env` to enable/disable specific components:
+
+```bash
+# Components
+INCLUDE_POSTGRES=true
+INCLUDE_DAGSTER=true
+INCLUDE_SUPERSET=true
+INCLUDE_MINIO=true
+INCLUDE_JUPYTERLAB=true
+INCLUDE_GRAFANA=true
+INCLUDE_LOKI=true
+INCLUDE_TRINO=false
+INCLUDE_KAFKA=false
+INCLUDE_FLINK=false
+
+# Spark workers (Level 3+)
+WORKERS=2
+
+# Resources
+SPARK_WORKER_MEMORY=2G
+SPARK_WORKER_CORES=2
+```
+
+After editing, regenerate and restart:
+
+```bash
+make generate
+make up
+```
+
+## Do You Need Spark?
+
+Before deploying Level 3+, ask yourself:
+
+| Data Size | Recommendation |
+|-----------|----------------|
+| < 10 GB | PostgreSQL + dbt or DuckDB. Spark is overkill. |
+| 10-100 GB | DuckDB or PostgreSQL + dbt. Spark optional. |
+| 100 GB - 1 TB | PostgreSQL/warehouse + dbt. Spark starts making sense. |
+| 1+ TB | Spark is justified. Consider Trino for federated queries. |
+
+## Production Deployment
+
+For production environments:
+
+1. **Generate secure secrets:**
+   ```bash
+   make secrets
+   ```
+
+2. **Enable Docker secrets:**
+   ```bash
+   make secrets-enable
+   ```
+
+3. **Enable HTTPS with Traefik:**
+   ```bash
+   # Add to .env
+   INCLUDE_TRAEFIK=true
+   DOMAIN=yourdomain.com
+   ```
+
+4. **Set up backups:**
+   ```bash
+   make backup
+   ```
+
+See [Security Guide](/docs/security/) and [Production Guide](/docs/production/) for more details.
 
 ## Troubleshooting
 
-If you encounter issues, please check the logs for the service in question. For example, to view the logs for the **Spark Master**:
+### Services won't start
 
+Check Docker is running and has enough resources:
 ```bash
-docker-compose logs spark-master
+docker info
+docker compose ps
 ```
 
-You can also check the [Kyros GitHub Issues](https://github.com/kyroslabs/kyros-project/issues) for known issues and troubleshooting tips.
+### Out of memory
 
----
+Reduce the number of services or increase Docker memory limit. Start with Level 1 and add components gradually.
 
-That’s it! You should now have Kyros running on your local machine or hosting platform. For more advanced setup options, refer to the [Advanced Configuration Guide](/docs/advanced-configuration/).
+### Port conflicts
+
+Check if ports are already in use:
+```bash
+lsof -i :3000  # Check Dagster port
+lsof -i :8088  # Check Superset port
+```
+
+### View service logs
+
+```bash
+docker compose logs dagster
+docker compose logs superset
+```
+
+## Next Steps
+
+- [Architecture Levels](/docs/architecture-levels/) - Deep dive into each level
+- [Components Reference](/docs/components/) - All available components
+- [Observability](/docs/observability/) - Monitoring with Grafana + Loki
+- [Security](/docs/security/) - Secrets management and HTTPS

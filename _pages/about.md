@@ -1,57 +1,76 @@
 ---
 permalink: /about/
 title: "About"
-excerpt: "Kyros is an open-source, cloud-agnostic data platform for modular and affordable infrastructure."
-last_modified_at: 2024-09-24T11:59:26-04:00
+excerpt: "Kyros is an open-source, cloud-agnostic data platform that scales from laptop to enterprise."
+last_modified_at: 2025-03-20
 toc: true
 ---
 
-🚧 **Kyros** is an open-source data platform focused on providing cloud-agnostic, modular solutions for data engineering and infrastructure management. Our mission is to offer a customizable, scalable, and affordable alternative to proprietary platforms like Databricks, without vendor lock-in. 
+**Kyros** is an open-source data platform that grows with your needs. Start with a simple PostgreSQL + Dagster setup, and progressively add components as your requirements evolve—without rewriting your infrastructure.
 
-Kyros is designed to leverage affordable hosting options and allows users to deploy only the components they need, keeping both complexity and costs low. Whether you're running small-scale operations or managing large, complex data environments, Kyros adapts to your needs.
+Our mission is to provide a **right-sized** alternative to one-size-fits-all platforms. Why pay for enterprise complexity when you need a data warehouse? Why struggle with basic tools when you need distributed processing?
 
-[Get Started with Kyros]({{ "/docs/quick-start-guide/" | relative_url }}){: .btn .btn--success .btn--large}
+[Get Started]({{ "/docs/quick-start-guide/" | relative_url }}){: .btn .btn--success .btn--large}
+[View on GitHub](https://github.com/benjamin-berhault/kyros){: .btn .btn--primary .btn--large}
 
-## Notable Features
+## Philosophy
 
-- **Modular Architecture**: Configure Kyros to deploy only what you need for cost-effective and efficient operations.
-- **Cloud-Agnostic**: Run on any cloud or local infrastructure—no vendor lock-in.
-- **Built for Big Data**: Use Apache Spark for large-scale data processing, dbt for pipelines, and Flink for real-time stream processing.
-- **Modern Data Formats**: Supports Delta Lake, Apache Iceberg, and Apache Pinot for robust, transactional data lakes and real-time OLAP queries.
-- **Kubernetes-Ready**: Seamless orchestration for scaling and deployment across cloud environments.
-- **Customizable Interfaces**: Fully customizable interfaces with integrations for JupyterLab, SQLPad, and Portainer.
+### Right Tool, Right Time, Right Cost
 
-## Demo Pages
+Traditional data platforms force a choice: simple but limited, or powerful but complex. Kyros offers a third way with **5 architecture levels**:
 
-| Name                                        | Description                                           |
-| ------------------------------------------- | ----------------------------------------------------- |
-| [Modular Architecture][modular-page]        | Overview of Kyros's modular configuration. |
-| [Cloud Agnostic Deployment][cloud-agnostic-page] | How to deploy Kyros on any cloud infrastructure. |
-| [Data Lake Management][data-lake-page]      | Managing large-scale data lakes with Kyros. |
-| [Real-Time Stream Processing][stream-processing-page] | Real-time data processing with Apache Flink. |
-| [SQL Interface][sql-interface-page]         | Use SQLPad and CloudBeaver for data querying. |
+| Level | Focus | When to Use |
+|-------|-------|-------------|
+| **0** | Learning | Tutorials, prototyping |
+| **1** | Foundation | Small teams, simple pipelines |
+| **2** | Production | Production workloads with monitoring |
+| **3** | Scale | Large datasets, distributed processing |
+| **4** | Enterprise | Full analytics platform |
 
-For even more examples and case studies, check the [projects archive][projects-archive].
+Each level builds on the previous, so you never throw away work when scaling up.
 
-[modular-page]: {{ "/docs/modular-architecture/" | relative_url }}
-[cloud-agnostic-page]: {{ "/docs/cloud-agnostic-deployment/" | relative_url }}
-[data-lake-page]: {{ "/docs/data-lake-management/" | relative_url }}
-[stream-processing-page]: {{ "/docs/real-time-stream-processing/" | relative_url }}
-[sql-interface-page]: {{ "/docs/sql-interface/" | relative_url }}
-[projects-archive]: {{ "/year-archive/" | relative_url }}
+### No Vendor Lock-in
 
----
+Kyros runs anywhere Docker runs:
+- Your laptop for development
+- A single VPS for small workloads
+- A multi-node cluster for enterprise scale
+- Any cloud provider (AWS, GCP, Azure, DigitalOcean)
+
+## Core Components
+
+| Component | Purpose |
+|-----------|---------|
+| **PostgreSQL** | Data warehouse and metadata storage |
+| **Dagster** | Pipeline orchestration and scheduling |
+| **Apache Superset** | Business intelligence and dashboards |
+| **MinIO** | S3-compatible object storage |
+| **Apache Spark** | Distributed data processing |
+| **Grafana + Loki** | Observability and logging |
+| **Traefik** | HTTPS and reverse proxy |
+
+## Documentation
+
+| Guide | Description |
+|-------|-------------|
+| [Quick Start]({{ "/docs/quick-start-guide/" | relative_url }}) | Get running in 5 minutes |
+| [Architecture Levels]({{ "/docs/architecture-levels/" | relative_url }}) | Understand the scaling model |
+| [Components]({{ "/docs/components/" | relative_url }}) | Full component reference |
+| [Security]({{ "/docs/security/" | relative_url }}) | Docker secrets and best practices |
+| [Production]({{ "/docs/production/" | relative_url }}) | Production deployment checklist |
 
 ## Credits
 
-- [Apache Spark](https://spark.apache.org)
-- [Apache Flink](https://flink.apache.org)
-- [Kubernetes](https://kubernetes.io)
-- [dbt](https://www.getdbt.com)
-- [Delta Lake](https://delta.io)
-- [Apache Iceberg](https://iceberg.apache.org)
-- [Portainer](https://www.portainer.io)
+Built with these excellent open-source projects:
+
+- [Apache Spark](https://spark.apache.org) - Distributed processing
+- [Apache Superset](https://superset.apache.org) - Business intelligence
+- [Dagster](https://dagster.io) - Data orchestration
+- [PostgreSQL](https://www.postgresql.org) - Database
+- [MinIO](https://min.io) - Object storage
+- [Grafana](https://grafana.com) - Observability
+- [Traefik](https://traefik.io) - Reverse proxy
 
 ---
 
-**Kyros** is designed, developed, and maintained by Kyros, with a focus on simplifying cloud infrastructure and making data engineering accessible and affordable.
+Kyros is developed and maintained by [Benjamin Berhault](https://github.com/benjamin-berhault).

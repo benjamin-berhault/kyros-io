@@ -1,38 +1,63 @@
 ---
-title: "Introducing Kyros: A New Era of Cloud-Agnostic Data Platforms"
+title: "Introducing Kyros: Data Platform at the Right Scale"
 date: 2024-09-24
 categories:
   - announcement
 tags:
   - kyros
-  - cloud-agnostic
   - data-platform
   - open-source
 ---
 
-We are thrilled to announce the upcoming launch of **Kyros**, a cloud-agnostic, modular, and fully customizable data platform designed to offer an affordable and scalable alternative to traditional cloud solutions.
+We are excited to introduce **Kyros**, an open-source data platform that grows with your needs. Start simple, scale when ready.
 
-### What is Kyros?
+## The Problem
 
-Kyros is an open-source platform, Apache-licensed, built to empower data engineers and businesses to **design, deploy, and manage** their data platforms with flexibility and ease. Whether you are working with large-scale data processing or simply need a cost-effective solution for your business, Kyros is here to simplify your infrastructure needs.
+Building a data platform usually means choosing between:
 
-**Key Features:**
+- **Simple tools** that work today but won't scale
+- **Enterprise platforms** with complexity you don't need yet
 
-- **Modular Architecture:** Deploy only what you need, with integrations for tools like Apache Spark, dbt, and Apache Flink.
-- **Cost-Effective Hosting:** Take advantage of affordable hosting services with predictable and transparent pricing.
-- **Open-Source:** Completely open-source and licensed under Apache 2.0, Kyros supports modern data storage formats such as Delta Lake, Apache Iceberg, and Apache Pinot.
-- **Cloud-Agnostic:** Avoid vendor lock-in and enjoy the flexibility to run Kyros on any infrastructure.
-- **Seamless Integration:** Built to easily integrate with your existing tools and workflows, reducing operational complexity.
+Either way, you end up rewriting infrastructure as your needs change.
 
-### Why Kyros?
+## The Kyros Approach
 
-The complexity, limitations, and costs of proprietary platforms like Databricks inspired the development of Kyros. We aim to simplify data infrastructure, reduce costs, and offer a scalable solution that evolves with your needs — all while remaining **vendor-independent**.
+Kyros solves this with **5 architecture levels**:
 
-With **Kyros**, you get **predictable pricing**, **modular deployments**, and an **easy-to-manage** platform. Perfect for teams with fluctuating workloads or those looking for an alternative to the overly complicated and costly options out there.
+| Level | What You Get |
+|-------|--------------|
+| **Level 0** | Dagster + PostgreSQL for learning and prototyping |
+| **Level 1** | Add Superset for BI dashboards |
+| **Level 2** | Add Grafana + Loki for production monitoring |
+| **Level 3** | Add Spark + MinIO for distributed processing |
+| **Level 4** | Add JupyterLab for full analytics workbench |
 
-Stay tuned as we get closer to the official launch of Kyros! In the meantime, [follow us on GitHub](https://github.com/kyros-studio/kyros) for updates, and be part of the future of cloud-agnostic data platforms.
+Each level builds on the previous. Your pipelines, dashboards, and configurations carry forward—no rewrites needed.
+
+## Key Features
+
+- **Progressive scaling** - Start with Level 1, grow to Level 4
+- **Cloud-agnostic** - Runs anywhere Docker runs
+- **Production-ready** - HTTPS, secrets management, backup/restore
+- **Observable** - Centralized logging with Grafana and Loki
+- **Open source** - Apache 2.0 licensed
+
+## Get Started
+
+```bash
+git clone https://github.com/benjamin-berhault/kyros.git
+cd kyros
+make level-1
+```
+
+You'll have PostgreSQL, Dagster, and Superset running in minutes.
+
+## Learn More
+
+- [Documentation](https://benjamin-berhault.github.io/kyros-io/docs/quick-start-guide/)
+- [GitHub Repository](https://github.com/benjamin-berhault/kyros)
+- [Architecture Levels](https://benjamin-berhault.github.io/kyros-io/docs/architecture-levels/)
 
 ---
 
-Follow our journey as we prepare to redefine the way data platforms are designed, deployed, and managed. More exciting updates are on the way, so be sure to subscribe for the latest news!
-
+Kyros is designed to make data engineering accessible—whether you're a solo developer learning pipelines or a team running production workloads.

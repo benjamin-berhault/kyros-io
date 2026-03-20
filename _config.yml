@@ -12,15 +12,15 @@ destination: docs
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "fr-FR"
-title                    : "🚧 Kyros - Open-Source Data Platform"
+locale                   : "en-US"
+title                    : "Kyros - Data Platform at the Right Scale"
 title_separator          : "-"
-subtitle                 : "Empowering Data, Simplifying Cloud"
-name                     : &name "Kyros" # Site name anchor for use later
-description              : &description "Kyros is a cloud-agnostic, modular, and customizable data platform offering affordable deployment and scalability."
-url                      : https://kyros.studio # Your custom domain
-baseurl                  : "" # Empty as the site is served at the root
-repository               : "kyros-studio/kyros" # Replace with your GitHub repository name
+subtitle                 : "Right tool • Right time • Right cost"
+name                     : &name "Kyros"
+description              : &description "Deploy the right data architecture at the right time. Start simple with DuckDB, scale to Spark when justified. Open-source, cloud-agnostic, modular."
+url                      : https://kyros.studio
+baseurl                  : ""
+repository               : "benjamin-berhault/kyros"
 teaser                   : "/assets/images/kyros-logo-800x500-teaser.png" # Optional path to a teaser image
 logo                     : "/assets/images/kyros-logo-88-alpha.png" # Path to your Kyros logo image
 favicon                  : "/assets/images/favicon.ico"
@@ -101,17 +101,17 @@ analytics:
 
 # Site Author
 author:
-  name             : *name # Using the anchor defined above for the site name
-  avatar           : "/assets/images/kyros-logo-136.png" # Path to an avatar image
-  bio              : "Building a cloud-agnostic, customizable, and scalable data platform."
+  name             : *name
+  avatar           : "/assets/images/kyros-logo-136.png"
+  bio              : "Data engineering at the right scale. Start simple, scale when justified."
   location         : "Geneva, Switzerland"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/kyros-studio/kyros"
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter"
-    #   url: "https://twitter.com/kyroslabs"
+      url: "https://github.com/benjamin-berhault/kyros"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/benjaminberhault/"
 
 
 # Site Footer
@@ -119,10 +119,10 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/kyros-studio/kyros"
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter"
-    #   url: "https://twitter.com/kyroslabs"
+      url: "https://github.com/benjamin-berhault/kyros"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/benjaminberhault/"
 
 
 # Reading Files
