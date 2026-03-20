@@ -29,9 +29,9 @@ feature_row:
     excerpt: "Built on proven technologies: PostgreSQL, Dagster, Superset, Spark, Trino, Kafka, Flink. All open-source, all production-ready."
 feature_row2:
   - image_path: /assets/images/kyros-feature-4.webp
-    alt: "One-Command Deploy"
-    title: "One-Command Deploy"
-    excerpt: "Choose your level: `make level-1` deploys PostgreSQL + Dagster + Superset. `make level-3` adds Spark + Trino. Interactive CLI guides you through custom configurations."
+    alt: "Deploy Your Way"
+    title: "Deploy Your Way"
+    excerpt: "**Web UI**: Visual component selection with live deployment logs. **CLI**: `make level-1` or interactive mode. **Makefile**: Simple commands for automation. Pick what fits your workflow."
   - image_path: /assets/images/kyros-feature-5.webp
     alt: "Production Ready"
     title: "Production Ready"
